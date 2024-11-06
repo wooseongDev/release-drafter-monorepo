@@ -1,0 +1,10 @@
+'app: docs':
+  - 'apps/docs/**/*'
+'app: web':
+  - 'apps/web/**/*'
+'package: eslint-config':
+  - 'packages/eslint-config/**/*'
+'package: typescript-config':
+  - 'packages/typescript-config/**/*'
+'package: ui':
+  - 'packages/ui/**/*'

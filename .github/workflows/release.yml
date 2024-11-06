@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  release:
+    types: [released]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Extract App Name from Tag
+        id: extract_app
+        run: |
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
+          echo "Tag Name: $TAG_NAME"
+
+          APP_NAME=$(echo "$TAG_NAME" | cut -d'@' -f1)
+          echo "App Name: $APP_NAME"
+
+          echo "app_name=$APP_NAME" >> $GITHUB_OUTPUT
+    
+      - name: Validate App Name
+        run: |
+          if [[ -z "${{ steps.extract_app.outputs.app_name }}" ]]; then
+            echo "App name could not be extracted from tag."
+            exit 1
+          fi
+          echo "Release application: ${{ steps.extract_app.outputs.app_name }}"
+
+      - name: Release
+        run: echo "(TODO) write release script"
