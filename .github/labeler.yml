@@ -1,10 +1,15 @@
 'app: docs':
-  - 'apps/docs/**/*'
+- changed-files:
+  - any-glob-to-any-file: 'apps/docs/*'
 'app: web':
-  - 'apps/web/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'apps/web/*'
 'package: eslint-config':
-  - 'packages/eslint-config/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'packages/eslint-config/*'
 'package: typescript-config':
-  - 'packages/typescript-config/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'packages/typescript-config/*'
 'package: ui':
-  - 'packages/ui/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'packages/ui/*'
