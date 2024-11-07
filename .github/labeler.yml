@@ -13,3 +13,9 @@
 'package: ui':
   - changed-files:
     - any-glob-to-any-file: 'packages/ui/*'
+
+feature:
+ - head-branch: ['^feat/']
+fix:
+ - head-branch: ['^fix/']
+ 
