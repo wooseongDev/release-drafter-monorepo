@@ -12,6 +12,8 @@ jobs:
   docs:
     name: '[docs] Draft release'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: release-drafter/release-drafter@v6
         with:
@@ -23,6 +25,8 @@ jobs:
   web:
     name: '[web] Draft release'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: release-drafter/release-drafter@v6
         with:
