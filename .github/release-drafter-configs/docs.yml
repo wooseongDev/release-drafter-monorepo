@@ -1,11 +1,13 @@
 name-template: 'docs@$RESOLVED_VERSION'
 tag-template: 'docs@$RESOLVED_VERSION'
 
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+tag-prefix: docs@
 
 include-labels:
   - "app: docs"
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 categories:
   - title: '🚀 Features'

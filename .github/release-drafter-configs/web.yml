@@ -1,11 +1,13 @@
 name-template: 'web@$RESOLVED_VERSION'
 tag-template: 'web@$RESOLVED_VERSION'
 
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+tag-prefix: web@
 
 include-labels:
   - "app: web"
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 
 categories:
   - title: '🚀 Features'
