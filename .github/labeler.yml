@@ -1,18 +1,18 @@
 'app: docs':
 - changed-files:
-  - any-glob-to-any-file: 'apps/docs/*'
+  - any-glob-to-any-file: 'apps/docs/**/*'
 'app: web':
   - changed-files:
-    - any-glob-to-any-file: 'apps/web/*'
+    - any-glob-to-any-file: 'apps/web/**/*'
 'package: eslint-config':
   - changed-files:
-    - any-glob-to-any-file: 'packages/eslint-config/*'
+    - any-glob-to-any-file: 'packages/eslint-config/**/*'
 'package: typescript-config':
   - changed-files:
-    - any-glob-to-any-file: 'packages/typescript-config/*'
+    - any-glob-to-any-file: 'packages/typescript-config/**/*'
 'package: ui':
   - changed-files:
-    - any-glob-to-any-file: 'packages/ui/*'
+    - any-glob-to-any-file: 'packages/ui/**/*'
 
 feature:
  - head-branch: ['^feat/']
